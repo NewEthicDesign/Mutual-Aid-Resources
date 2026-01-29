@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mutual Aid: Food + Care (No Insurance OK)</title>
-  <meta name="description" content="A lightweight, offline-friendly list of mutual aid resources for food, medical care, meds/supplies, and vet care." />
+  <title>Mutual Aid (US): Food + Health + Vet Care</title>
+  <meta name="description" content="US-based mutual aid resources: food shares, community fridges/pantries, low-cost care without insurance, meds/supplies, harm reduction, and vet assistance." />
+
   <style>
     :root{
       --bg:#0b0c10;
@@ -13,6 +14,8 @@
       --muted:#b6b6bf;
       --link:#7dd3fc;
       --line:#23243a;
+      --accent:#a3e635;
+      --warn:#fbbf24;
     }
     *{box-sizing:border-box}
     body{
@@ -23,12 +26,13 @@
       color:var(--text);
     }
     main{
-      max-width: 860px;
-      padding: 28px 18px 60px;
+      max-width: 920px;
+      padding: 28px 18px 70px;
       margin: 0 auto;
     }
-    h1{font-size: 1.9rem; margin: 0 0 10px;}
-    h2{font-size: 1.25rem; margin: 28px 0 10px;}
+    h1{font-size: 1.9rem; margin: 0 0 8px;}
+    h2{font-size: 1.25rem; margin: 26px 0 10px;}
+    h3{font-size: 1.05rem; margin: 16px 0 6px;}
     p{margin: 10px 0;}
     a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
@@ -43,13 +47,9 @@
       color: var(--muted);
       font-size: .95rem;
     }
-    ul{margin: 10px 0 6px 22px}
-    li{margin: 8px 0}
-    .links{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:6px;
-      color:var(--muted);
-      font-size:.95rem;
+    .kicker{
+      display:flex; flex-wrap:wrap; gap:8px;
+      margin-top:10px;
     }
     .pill{
       display:inline-block;
@@ -57,187 +57,269 @@
       border:1px solid var(--line);
       border-radius:999px;
       background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:.92rem;
     }
-    hr{
-      border:0;
-      border-top:1px solid var(--line);
-      margin: 18px 0;
+    .pill.good{border-color: rgba(163,230,53,.35); color: rgba(163,230,53,.95);}
+    .pill.warn{border-color: rgba(251,191,36,.35); color: rgba(251,191,36,.95);}
+    ul{margin: 10px 0 6px 22px}
+    li{margin: 9px 0}
+    .links{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:.95rem;
     }
-    footer{margin-top: 28px; color: var(--muted); font-size:.95rem}
     code{background:rgba(255,255,255,.06); padding:2px 6px; border-radius:8px}
+    hr{border:0; border-top:1px solid var(--line); margin: 18px 0;}
+    footer{margin-top: 26px; color: var(--muted); font-size:.95rem}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>Mutual Aid: Food + Basic Health + Vet Care (No Insurance OK)</h1>
+    <h1>Mutual Aid (US): Food + Basic Health + Vet Care</h1>
 
     <div class="card">
       <p class="note">
-        Save this page to your device:
+        Save this page so it still works when you’re offline:
         <br/>• Desktop: <b>Ctrl+S</b> (Windows) or <b>Cmd+S</b> (Mac)
         <br/>• Phone: Share → “Save to Files” / “Download”
       </p>
-      <p class="note">
-        This is a starter list for when you’re low on food, money, or access—and need options the system isn’t providing.
-        Pick what fits your situation and your people.
-      </p>
-      <div class="links">
-        <span class="pill">Works offline</span>
-        <span class="pill">Shareable</span>
-        <span class="pill">Start with zip/city searches</span>
+      <div class="kicker">
+        <span class="pill good">US-focused</span>
+        <span class="pill good">low/no-barrier resources</span>
+        <span class="pill">printable / shareable</span>
       </div>
+      <p class="note">
+        Tip: add a top section called <b>“Local: [Your City]”</b> and paste in your best fridge/pantry/clinic links.
+      </p>
     </div>
 
-    <h2>Start here (fastest way to find local help)</h2>
-    <ul>
-      <li>
-        <b>211 (United Way)</b> — call/text to get routed to nearby food, rent help, clinics, shelters, etc.
-        <div class="links">
-          <a href="https://www.211.org/" target="_blank" rel="noopener">211.org</a>
-          <a href="https://www.211.org/about-us/your-local-211" target="_blank" rel="noopener">Find your local 211</a>
-        </div>
-      </li>
-      <li>
-        <b>findhelp (formerly Aunt Bertha)</b> — search free/reduced-cost programs by ZIP code.
-        <div class="links">
-          <a href="https://www.findhelp.org/" target="_blank" rel="noopener">findhelp.org</a>
-        </div>
-      </li>
-    </ul>
+    <h2>Food that feels like mutual aid (not paperwork)</h2>
 
-    <h2>Food (mutual aid + free meals)</h2>
-    <ul>
-      <li>
-        <b>Food Not Bombs</b> — volunteer-run free meal shares; many cities have chapters and regular servings.
+    <div class="grid">
+      <div class="card">
+        <h3>Food Not Bombs</h3>
+        <p class="note">Free meal shares run by volunteers (many cities).</p>
         <div class="links">
           <a href="https://foodnotbombs.net/new_site/" target="_blank" rel="noopener">foodnotbombs.net</a>
         </div>
-      </li>
-      <li>
-        <b>Food pantries + community fridges</b> — easiest is usually ZIP-code search via 211 or findhelp.
-        <div class="links">
-          <a href="https://www.211.org/" target="_blank" rel="noopener">Search via 211</a>
-          <a href="https://www.findhelp.org/" target="_blank" rel="noopener">Search via findhelp</a>
-        </div>
-      </li>
-    </ul>
+      </div>
 
-    <h2>Medical care without insurance (or low-cost)</h2>
-    <ul>
-      <li>
-        <b>HRSA Health Centers (FQHCs)</b> — community clinics that provide primary care and often offer sliding-scale fees.
+      <div class="card">
+        <h3>Community fridges</h3>
+        <p class="note">Neighborhood fridges stocked by locals. Search a map, then also check Instagram/FB in your city.</p>
         <div class="links">
-          <a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener">Find a Health Center</a>
-          <a href="https://www.hrsa.gov/get-health-care" target="_blank" rel="noopener">HRSA: Get health care</a>
+          <a href="https://freedge.org/locations/" target="_blank" rel="noopener">freedge.org (map)</a>
         </div>
-      </li>
-      <li>
-        <b>Free & Charitable Clinics (NAFC)</b> — search for free/low-cost clinics near you.
-        <div class="links">
-          <a href="https://nafcclinics.org/find-clinic/" target="_blank" rel="noopener">NAFC clinic finder</a>
-        </div>
-      </li>
-      <li>
-        <b>Telehealth (often cheaper than urgent care)</b>
-        <ul>
-          <li>
-            <b>Doctor On Demand</b> — 24/7 virtual urgent care + mental health options.
-            <div class="links">
-              <a href="https://doctorondemand.com/" target="_blank" rel="noopener">doctorondemand.com</a>
-              <a href="https://doctorondemand.com/urgent-care/" target="_blank" rel="noopener">Virtual urgent care</a>
-            </div>
-          </li>
-          <li>
-            <b>Dr. B</b> — low-cost online consults (and a “No-Cost Care” option for people who qualify).
-            <div class="links">
-              <a href="https://drb.ai/" target="_blank" rel="noopener">drb.ai</a>
-            </div>
-          </li>
-        </ul>
-      </li>
-    </ul>
+      </div>
 
-    <h2>Medications + medical supplies</h2>
-    <ul>
-      <li>
-        <b>NeedyMeds</b> — info on prescription assistance programs, discount options, and clinics.
+      <div class="card">
+        <h3>Little Free Pantries</h3>
+        <p class="note">24/7 mini pantries (food + hygiene) run by neighbors.</p>
         <div class="links">
-          <a href="https://www.needymeds.org/" target="_blank" rel="noopener">needymeds.org</a>
+          <a href="https://mapping.littlefreepantry.org/" target="_blank" rel="noopener">Find a pantry (map)</a>
+          <a href="https://www.littlefreepantry.org/" target="_blank" rel="noopener">littlefreepantry.org</a>
         </div>
-      </li>
-      <li>
-        <b>Ask clinics about “sliding scale” + sample programs</b> — many community clinics can help you access discounted meds,
-        pharmacy assistance, or referrals to programs even if you’re uninsured.
-        <div class="links">
-          <a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener">Find an FQHC</a>
-          <a href="https://nafcclinics.org/find-clinic/" target="_blank" rel="noopener">Find a free/charitable clinic</a>
-        </div>
-      </li>
-      <li>
-        <b>Local “medical supply closets” / mutual aid supply drives</b> — search via <code>findhelp</code> or <code>211</code> using terms like:
-        <br/><span class="note">“diapers”, “incontinence supplies”, “wheelchair”, “medical equipment”, “wound care”, “first aid”, “harm reduction”, “naloxone”, “syringe services”.</span>
-        <div class="links">
-          <a href="https://www.findhelp.org/" target="_blank" rel="noopener">Search on findhelp</a>
-          <a href="https://www.211.org/" target="_blank" rel="noopener">Search via 211</a>
-        </div>
-      </li>
-    </ul>
+      </div>
 
-    <h2>Vet care without insurance</h2>
-    <ul>
-      <li>
-        <b>Pet Help Finder</b> — search low-cost vets, clinics with discounts/payment options, and pet food/supply help.
+      <div class="card">
+        <h3>Lasagna Love</h3>
+        <p class="note">Neighbor-to-neighbor home-cooked meal deliveries (US + others).</p>
         <div class="links">
-          <a href="https://www.pethelpfinder.org/" target="_blank" rel="noopener">pethelpfinder.org</a>
-          <a href="https://www.211.org/partner-us/pet-help-finder" target="_blank" rel="noopener">About Pet Help Finder</a>
+          <a href="https://lasagnalove.org/request/" target="_blank" rel="noopener">Request a meal</a>
+          <a href="https://lasagnalove.org/" target="_blank" rel="noopener">lasagnalove.org</a>
         </div>
-      </li>
-      <li>
-        <b>Humane World / Humane Societies</b> — guidance + pointers to low-cost care (often includes spay/neuter & vaccines).
-        <div class="links">
-          <a href="https://www.humaneworld.org/en/resources/having-trouble-affording-your-pet" target="_blank" rel="noopener">Humane World resource page</a>
-        </div>
-      </li>
-      <li>
-        <b>ASPCA services</b> — some locations offer low-cost services (availability varies by region).
-        <div class="links">
-          <a href="https://www.aspca.org/veterinary-services" target="_blank" rel="noopener">ASPCA veterinary services</a>
-        </div>
-      </li>
-      <li>
-        <b>Emergency vet funding (small grants)</b> — if your pet has urgent, life-threatening needs and you’re short on funds:
-        <div class="links">
-          <a href="https://redrover.org/relief/urgent-care-grants/" target="_blank" rel="noopener">RedRover Relief Urgent Care Grants</a>
-        </div>
-      </li>
-    </ul>
+      </div>
+    </div>
 
-    <hr/>
+    <h2>Healthcare without insurance (low-cost and real options)</h2>
 
-    <h2>If you’re overwhelmed</h2>
     <div class="card">
+      <h3>Community Health Centers (HRSA / FQHC)</h3>
+      <p class="note">Sliding-scale clinics in every state; primary care + often dental/mental health. Great default starting point.</p>
+      <div class="links">
+        <a href="https://findahealthcenter.hrsa.gov/" target="_blank" rel="noopener">Find a Health Center</a>
+        <a href="https://www.hrsa.gov/get-health-care" target="_blank" rel="noopener">HRSA: Get health care</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Free & Charitable Clinics (NAFC)</h3>
+      <p class="note">Volunteer/nonprofit clinics + charitable pharmacies. Search by ZIP.</p>
+      <div class="links">
+        <a href="https://nafcclinics.org/find-clinic/" target="_blank" rel="noopener">Find a clinic</a>
+        <a href="https://nafcclinics.org/find-healthcare-services/" target="_blank" rel="noopener">Find clinics + pharmacies</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Remote Area Medical (RAM) pop-up clinics</h3>
+      <p class="note">Free mobile clinics (medical/dental/vision) that rotate by location; check schedule.</p>
+      <div class="links">
+        <a href="https://www.ramusa.org/" target="_blank" rel="noopener">ramusa.org</a>
+        <a href="https://www.ramusa.org/schedule/" target="_blank" rel="noopener">Clinic schedule</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Telehealth (often cheaper than urgent care)</h3>
+      <ul>
+        <li>
+          <b>Doctor On Demand</b> — 24/7 virtual urgent care + mental health options.
+          <div class="links">
+            <a href="https://doctorondemand.com/" target="_blank" rel="noopener">doctorondemand.com</a>
+            <a href="https://doctorondemand.com/urgent-care/" target="_blank" rel="noopener">Urgent care info</a>
+          </div>
+        </li>
+        <li>
+          <b>Dr. B</b> — low-cost online consults + “No-Cost Care” for people who qualify.
+          <div class="links">
+            <a href="https://drb.ai/" target="_blank" rel="noopener">drb.ai</a>
+            <a href="https://drb.ai/financial-hardship" target="_blank" rel="noopener">No-Cost Care info</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Meds + supplies</h2>
+
+    <div class="card">
+      <h3>NeedyMeds</h3>
+      <p class="note">Prescription assistance programs, discounts, and listings for clinics/dental care.</p>
+      <div class="links">
+        <a href="https://www.needymeds.org/" target="_blank" rel="noopener">needymeds.org</a>
+      </div>
       <p class="note">
-        Start with one action:
-        <br/>1) Call <b>211</b> and say what you need (food + clinic + meds/supplies + pet care).
-        <br/>2) Search <b>findhelp</b> by ZIP code.
-        <br/>3) If you need care today but can’t access a clinic, consider <b>telehealth</b> options (Doctor On Demand / Dr. B).
+        Search terms on any local directory: <code>medical equipment</code>, <code>diapers</code>, <code>wound care</code>, <code>incontinence supplies</code>, <code>first aid</code>, <code>naloxone</code>.
       </p>
     </div>
 
-    <h2>About mirrors & sharing</h2>
+    <h2>Harm reduction (often the most “mutual aid” health infrastructure)</h2>
+
+    <div class="card">
+      <h3>NEXT Distro (mail-based supplies + naloxone)</h3>
+      <p class="note">Mail-based harm reduction service (including naloxone options) and support resources.</p>
+      <div class="links">
+        <a href="https://nextdistro.org/" target="_blank" rel="noopener">nextdistro.org</a>
+        <a href="https://nextdistro.org/naloxone" target="_blank" rel="noopener">Naloxone page</a>
+        <a href="https://nextdistro.org/getnext" target="_blank" rel="noopener">Get supplies</a>
+      </div>
+    </div>
+
+    <h2>Reproductive care / abortion support</h2>
+
+    <div class="card">
+      <h3>National Network of Abortion Funds</h3>
+      <p class="note">Find local funds that can help with costs, logistics, and support.</p>
+      <div class="links">
+        <a href="https://abortionfunds.org/" target="_blank" rel="noopener">abortionfunds.org</a>
+        <a href="https://abortionfunds.org/find-a-fund/" target="_blank" rel="noopener">Find a fund</a>
+      </div>
+    </div>
+
+    <h2>Peer support / mental health outside the “carceral” pipeline</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Fireweed Collective</h3>
+        <p class="note">Healing Justice / Disability Justice mental health resources and mutual aid.</p>
+        <div class="links">
+          <a href="https://fireweedcollective.org/" target="_blank" rel="noopener">fireweedcollective.org</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Wildflower Alliance</h3>
+        <p class="note">Peer support, harm reduction, advocacy, trainings.</p>
+        <div class="links">
+          <a href="https://wildfloweralliance.org/" target="_blank" rel="noopener">wildfloweralliance.org</a>
+          <a href="https://wildfloweralliance.org/peer-support-line/" target="_blank" rel="noopener">Peer support line</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Vet care without insurance</h2>
+
+    <div class="card">
+      <h3>Pet Help Finder</h3>
+      <p class="note">Search financially-friendly vet care, pet food/supplies, temporary housing, vouchers, etc.</p>
+      <div class="links">
+        <a href="https://www.pethelpfinder.org/m/phf" target="_blank" rel="noopener">pethelpfinder.org</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Emergency / urgent help</h3>
+      <ul>
+        <li>
+          <b>RedRover Relief Urgent Care Grants</b> — helps fill a small gap for life-threatening situations.
+          <div class="links">
+            <a href="https://redrover.org/relief/urgent-care-grants/" target="_blank" rel="noopener">Urgent Care Grants</a>
+          </div>
+          <p class="note"><span class="pill warn">Note</span> Grants aren’t guaranteed; still seek care immediately if your pet is at risk.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Non-emergency assistance</h3>
+      <ul>
+        <li>
+          <b>The Pet Fund</b> — financial assistance for veterinary care (often non-urgent; may have wait times).
+          <div class="links">
+            <a href="https://thepetfund.com/" target="_blank" rel="noopener">thepetfund.com</a>
+            <a href="https://thepetfund.com/for-pet-owners/financial-assistance" target="_blank" rel="noopener">Financial assistance info</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Directories (useful, but not the whole strategy)</h2>
+
     <div class="card">
       <p class="note">
-        Some things disappear or get blocked. When you can, save pages offline, screenshot key info, and share files person-to-person.
-        If you host this page, consider posting a mirror too.
+        These can help you find local stuff fast, but mutual aid often lives on Instagram, community fridges, and neighborhood networks.
+      </p>
+      <ul>
+        <li>
+          <b>211</b> (routing to local help)
+          <div class="links">
+            <a href="https://www.211.org/" target="_blank" rel="noopener">211.org</a>
+          </div>
+        </li>
+        <li>
+          <b>findhelp</b> (ZIP search for programs)
+          <div class="links">
+            <a href="https://www.findhelp.org/" target="_blank" rel="noopener">findhelp.org</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr/>
+
+    <div class="card">
+      <h3>If you’re overwhelmed</h3>
+      <p class="note">
+        Pick one: (1) Find a <b>community fridge</b> or <b>Little Free Pantry</b> nearby.
+        (2) Find a <b>HRSA health center</b> (sliding scale).
+        (3) If you need same-day care, use <b>Doctor On Demand</b> or <b>Dr. B</b>.
+        (4) For pets, start with <b>Pet Help Finder</b>.
       </p>
     </div>
 
     <footer>
-      License: CC0 — copy, remix, share, and mirror freely. <br/>
-      Tip: Customize this page for your city by adding your local clinics, fridges, meal shares, and mutual aid groups at the top.
+      License: CC0 — copy, remix, mirror freely. <br/>
+      Suggestion: add a “Local: [City]” section with 5–15 verified links people actually use.
     </footer>
   </main>
 </body>
 </html>
- 
