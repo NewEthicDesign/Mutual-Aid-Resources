@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mutual Aid (US): Survival, Care, Land & Community</title>
-  <meta name="description" content="US-based mutual aid resources: food, housing, healthcare, income, land access, communal living, IDs, transportation, and harm reduction." />
+  <title>Mutual Aid & Survival Resources (US)</title>
+
+  <meta name="description" content="Practical mutual aid resources for food, healthcare, prescriptions, housing, land access, shared living, survival work, and community care in the US." />
 
   <style>
     :root{
@@ -15,57 +16,54 @@
       --link:#7dd3fc;
       --line:#23243a;
       --accent:#a3e635;
-      --warn:#fbbf24;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       line-height:1.55;
       background:var(--bg);
       color:var(--text);
     }
-
-    /* Sticky nav */
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(11,12,16,.92);
-      backdrop-filter:blur(6px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav-inner{
-      max-width:920px;
-      margin:0 auto;
-      padding:10px 18px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .nav a{
-      font-size:.9rem;
-      color:var(--muted);
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:6px 10px;
-      text-decoration:none;
-    }
-    .nav a:hover{color:var(--text)}
-
     html{scroll-behavior:smooth}
     section{scroll-margin-top:90px}
 
-    main{
-      max-width:920px;
-      padding:28px 18px 70px;
-      margin:0 auto;
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(11,12,16,.95);
+      border-bottom:1px solid var(--line);
     }
-    h1{font-size:1.9rem;margin:0 0 8px}
-    h2{font-size:1.25rem;margin:26px 0 10px}
-    h3{font-size:1.05rem;margin:16px 0 6px}
-    p{margin:10px 0}
+    .nav-inner{
+      max-width:960px;
+      margin:0 auto;
+      padding:10px 16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:.85rem;
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+    }
+    .nav a:hover{color:var(--text)}
+
+    main{
+      max-width:960px;
+      margin:0 auto;
+      padding:28px 16px 80px;
+    }
+    h1{font-size:1.9rem;margin-bottom:6px}
+    h2{font-size:1.35rem;margin-top:30px}
+    h3{font-size:1.05rem;margin-bottom:4px}
+    p{margin:8px 0}
     a{color:var(--link)}
+
     .card{
       background:var(--card);
       border:1px solid var(--line);
@@ -73,16 +71,20 @@
       padding:14px;
       margin:12px 0;
     }
-    .note{color:var(--muted);font-size:.95rem}
     .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:12px;
     }
-    ul{margin:10px 0 6px 22px}
-    li{margin:8px 0}
-    footer{margin-top:26px;color:var(--muted);font-size:.95rem}
-    hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+    .note{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+    footer{
+      margin-top:40px;
+      font-size:.9rem;
+      color:var(--muted);
+    }
   </style>
 </head>
 
@@ -92,155 +94,224 @@
   <div class="nav-inner">
     <a href="#food">Food</a>
     <a href="#healthcare">Healthcare</a>
-    <a href="#meds">Meds</a>
+    <a href="#telehealth">Telehealth</a>
+    <a href="#prescriptions">Prescriptions</a>
     <a href="#harm-reduction">Harm Reduction</a>
     <a href="#mental-health">Peer Support</a>
-    <a href="#employment">Work & Income</a>
+    <a href="#employment">Work</a>
     <a href="#survival-work">Survival Work</a>
     <a href="#housing">Housing</a>
     <a href="#transport">Transport</a>
     <a href="#ids">IDs</a>
     <a href="#land">Land</a>
     <a href="#community-living">Shared Living</a>
-    <a href="#vet">Vet Care</a>
   </div>
 </nav>
 
 <main>
 
-<h1>Mutual Aid (US): Survival, Care, Land & Community</h1>
+<h1>Mutual Aid & Survival Resources (US)</h1>
+<p class="note">
+This page prioritizes **low-barrier, non-carceral, real-world survival resources**.
+No moralizing. No shaming. Use what helps.
+</p>
 
+<!-- FOOD -->
 <section id="food">
-<h2>Food (no paperwork, no shame)</h2>
+<h2>Food (no paperwork, no means testing)</h2>
 <div class="grid">
+
   <div class="card">
     <h3>Food Not Bombs</h3>
+    <p>Volunteer-run groups sharing free meals in public spaces. No ID, no sign-up. Often politically active and explicitly anti-capitalist.</p>
     <a href="https://foodnotbombs.net/new_site/">foodnotbombs.net</a>
   </div>
+
   <div class="card">
     <h3>Community Fridges</h3>
+    <p>Public refrigerators stocked by neighbors. Take what you need, leave what you can. Often 24/7.</p>
     <a href="https://freedge.org/locations/">freedge.org</a>
   </div>
+
   <div class="card">
     <h3>Little Free Pantries</h3>
-    <a href="https://mapping.littlefreepantry.org/">Find a pantry</a>
+    <p>Decentralized pantry boxes — shelf-stable food, hygiene supplies, sometimes pet food.</p>
+    <a href="https://mapping.littlefreepantry.org/">Find one</a>
   </div>
+
   <div class="card">
     <h3>Lasagna Love</h3>
+    <p>Home-cooked meals delivered by volunteers. Not emergency food, but useful when burnt out or sick.</p>
     <a href="https://lasagnalove.org/request/">Request a meal</a>
   </div>
+
 </div>
 </section>
 
+<!-- HEALTHCARE -->
 <section id="healthcare">
 <h2>Healthcare without insurance</h2>
 <div class="grid">
+
   <div class="card">
-    <h3>HRSA Health Centers</h3>
+    <h3>HRSA Community Health Centers</h3>
+    <p>Sliding-scale clinics. Primary care, dental, mental health, sometimes meds. Immigration status not required.</p>
     <a href="https://findahealthcenter.hrsa.gov/">findahealthcenter.hrsa.gov</a>
   </div>
+
   <div class="card">
     <h3>Free & Charitable Clinics</h3>
+    <p>Volunteer clinicians. Often limited hours but truly free care.</p>
     <a href="https://nafcclinics.org/find-clinic/">nafcclinics.org</a>
   </div>
+
 </div>
 </section>
 
-<section id="meds">
-<h2>Meds & supplies</h2>
-<div class="card">
-  <h3>NeedyMeds</h3>
-  <a href="https://www.needymeds.org/">needymeds.org</a>
+<!-- TELEHEALTH -->
+<section id="telehealth">
+<h2>Low-cost telehealth</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>Doctor On Demand</h3>
+    <p>Video visits for urgent care, mental health, and chronic issues. Often cheaper than urgent care, even without insurance.</p>
+    <a href="https://www.doctorondemand.com/">doctorondemand.com</a>
+  </div>
+
+  <div class="card">
+    <h3>Doctor B</h3>
+    <p>Asynchronous visits for common conditions (UTIs, birth control, acne, anxiety meds refills). Often **one of the cheapest options**.</p>
+    <a href="https://doctorb.com/">doctorb.com</a>
+  </div>
+
 </div>
 </section>
 
+<!-- PRESCRIPTIONS -->
+<section id="prescriptions">
+<h2>Prescriptions & medication savings</h2>
+<div class="grid">
+
+  <div class="card">
+    <h3>GoodRx</h3>
+    <p>Coupons that often make meds cheaper than insurance. Pharmacies do not advertise this — ask anyway.</p>
+    <a href="https://www.goodrx.com/">goodrx.com</a>
+  </div>
+
+  <div class="card">
+    <h3>NeedyMeds</h3>
+    <p>Manufacturer assistance programs, free clinics, and discount cards.</p>
+    <a href="https://www.needymeds.org/">needymeds.org</a>
+  </div>
+
+</div>
+
+<p class="note">
+💡 **Important:** Cash price + GoodRx is frequently cheaper than insurance.  
+Always ask the pharmacy to check *both*.
+</p>
+</section>
+
+<!-- HARM REDUCTION -->
 <section id="harm-reduction">
 <h2>Harm reduction</h2>
 <div class="card">
   <h3>NEXT Distro</h3>
+  <p>Mail-order naloxone, fentanyl test strips, sterile supplies, and overdose prevention education.</p>
   <a href="https://nextdistro.org/">nextdistro.org</a>
 </div>
 </section>
 
+<!-- MENTAL HEALTH -->
 <section id="mental-health">
 <h2>Peer & non-carceral mental health</h2>
 <div class="grid">
-  <div class="card"><a href="https://fireweedcollective.org/">Fireweed Collective</a></div>
-  <div class="card"><a href="https://wildfloweralliance.org/">Wildflower Alliance</a></div>
+
+  <div class="card">
+    <h3>Fireweed Collective</h3>
+    <p>Radical mental health education, trauma support, and community care models.</p>
+    <a href="https://fireweedcollective.org/">fireweedcollective.org</a>
+  </div>
+
+  <div class="card">
+    <h3>Wildflower Alliance</h3>
+    <p>Peer support lines, harm reduction, and alternatives to forced treatment.</p>
+    <a href="https://wildfloweralliance.org/">wildfloweralliance.org</a>
+  </div>
+
 </div>
 </section>
 
-<section id="employment">
-<h2>Work & income</h2>
-<div class="card">
-  <a href="https://workercenters.com/">Worker Centers</a><br>
-  <a href="https://www.modestneeds.org/">Modest Needs grants</a>
-</div>
-</section>
-
+<!-- SURVIVAL WORK -->
 <section id="survival-work">
-<h2>Survival work (WWOOF, caretaking, barter)</h2>
+<h2>Survival work (housing-for-labor, barter, caretaking)</h2>
 <div class="grid">
-  <div class="card"><a href="https://wwoofusa.org/">WWOOF USA</a></div>
-  <div class="card"><a href="https://www.workaway.info/">Workaway</a></div>
-  <div class="card"><a href="https://timebanks.org/">TimeBanks</a></div>
+
+  <div class="card">
+    <h3>WWOOF USA</h3>
+    <p>Farm stays in exchange for labor. Food + housing, variable politics — vet hosts carefully.</p>
+    <a href="https://wwoofusa.org/">wwoofusa.org</a>
+  </div>
+
+  <div class="card">
+    <h3>Workaway</h3>
+    <p>Wide range of barter work: farms, hostels, childcare, renovations.</p>
+    <a href="https://www.workaway.info/">workaway.info</a>
+  </div>
+
+  <div class="card">
+    <h3>TimeBanks</h3>
+    <p>Trade skills and labor without money. Strong local resilience tool.</p>
+    <a href="https://timebanks.org/">timebanks.org</a>
+  </div>
+
 </div>
 </section>
 
-<section id="housing">
-<h2>Housing & eviction defense</h2>
-<div class="grid">
-  <div class="card"><a href="https://atun-rsia.org/">Autonomous Tenant Union Network</a></div>
-  <div class="card"><a href="https://www.modestneeds.org/">Emergency rent help</a></div>
-  <div class="card"><a href="https://www.lawhelp.org/">Tenant legal help</a></div>
-</div>
-</section>
-
-<section id="transport">
-<h2>Transportation</h2>
-<div class="grid">
-  <div class="card"><a href="https://www.211.org/">211 Transit help</a></div>
-  <div class="card"><a href="https://www.bikecollectives.org/wiki/Community_Bicycle_Organizations">Bike Co-ops</a></div>
-</div>
-</section>
-
-<section id="ids">
-<h2>IDs & paperwork</h2>
-<div class="grid">
-  <div class="card"><a href="https://www.usa.gov/replace-vital-documents">Replace documents</a></div>
-  <div class="card"><a href="https://nationalhomeless.org/references/need-help-getting-id/">ID help</a></div>
-</div>
-</section>
-
+<!-- LAND -->
 <section id="land">
-<h2>Land access & growing food</h2>
+<h2>Land access & food sovereignty</h2>
 <div class="grid">
-  <div class="card"><a href="https://groundedsolutions.org/">Community Land Trusts</a></div>
-  <div class="card"><a href="https://landforgood.org/">Land for Good</a></div>
+
+  <div class="card">
+    <h3>Community Land Trusts</h3>
+    <p>Collectively owned land removed from speculation. Affordable housing, farms, and co-ops.</p>
+    <a href="https://groundedsolutions.org/">groundedsolutions.org</a>
+  </div>
+
+  <div class="card">
+    <h3>Land For Good</h3>
+    <p>Helps people access farmland through leases, co-ops, and land matching.</p>
+    <a href="https://landforgood.org/">landforgood.org</a>
+  </div>
+
 </div>
 </section>
 
+<!-- COMMUNITY LIVING -->
 <section id="community-living">
 <h2>Shared living & communal expenses</h2>
 <div class="grid">
-  <div class="card"><a href="https://www.ic.org/">Intentional Communities</a></div>
-  <div class="card"><a href="https://www.ncb.coop/">Housing Co-ops</a></div>
+
+  <div class="card">
+    <h3>Intentional Communities</h3>
+    <p>Co-housing, eco-villages, income-sharing, collective childcare.</p>
+    <a href="https://www.ic.org/">ic.org</a>
+  </div>
+
+  <div class="card">
+    <h3>Housing Co-ops</h3>
+    <p>Resident-owned housing with shared costs and democratic control.</p>
+    <a href="https://www.ncb.coop/">ncb.coop</a>
+  </div>
+
 </div>
 </section>
-
-<section id="vet">
-<h2>Vet care</h2>
-<div class="grid">
-  <div class="card"><a href="https://www.pethelpfinder.org/">Pet Help Finder</a></div>
-  <div class="card"><a href="https://redrover.org/relief/urgent-care-grants/">RedRover Relief</a></div>
-</div>
-</section>
-
-<hr>
 
 <footer>
-  License: CC0 — copy, remix, print, mirror.<br>
-  Add a “Local: [Your City]” section for best results.
+License: CC0 — copy, remix, print, mirror, translate.  
+Best when localized city-by-city.
 </footer>
 
 </main>
